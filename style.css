@@ -1,0 +1,417 @@
+/* =========================
+   COULEURS
+========================= */
+
+:root {
+  --pink: #d86b95;
+  --pink-dark: #b94c79;
+  --pink-light: #f8dce7;
+
+  --brown: #8d654f;
+  --brown-dark: #634638;
+
+  --cream: #fff8f1;
+  --cream-dark: #f3e4d8;
+
+  --white: #ffffff;
+  --text: #4f4039;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  background:
+    radial-gradient(circle at top left, #f9dce8 0%, transparent 30%),
+    linear-gradient(135deg, #fff8f1, #f8eee6);
+
+  color: var(--text);
+
+  min-height: 100vh;
+
+  padding: 30px 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(141, 101, 79, 0.15);
+  border-radius: 30px;
+
+  padding: 70px 20px;
+
+  box-shadow: 0 20px 50px rgba(99, 70, 56, 0.09);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  background: var(--pink-light);
+  border-radius: 50%;
+
+  top: -100px;
+  right: -70px;
+
+  opacity: 0.65;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  background: var(--cream-dark);
+  border-radius: 50%;
+
+  bottom: -100px;
+  left: -40px;
+}
+
+.heart {
+  font-size: 48px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.small-title {
+  letter-spacing: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--pink-dark);
+
+  margin-bottom: 12px;it add
+
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(45px, 8vw, 75px);
+
+  color: var(--brown-dark);
+
+  line-height: 1;
+
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 span {
+  color: var(--pink);
+  font-style: italic;
+}
+
+.subtitle {
+  max-width: 580px;
+  margin: 22px auto 0;
+
+  line-height: 1.7;
+  color: #79655b;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================
+   WISHLIST
+========================= */
+
+.wishlist {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+
+  margin-top: 35px;
+}
+
+.gift-card {
+  display: flex;
+  gap: 18px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  border-radius: 22px;
+
+  padding: 25px;
+
+  border: 1px solid rgba(141, 101, 79, 0.13);
+
+  box-shadow: 0 12px 30px rgba(99, 70, 56, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.gift-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 40px
+    rgba(99, 70, 56, 0.12);
+}
+
+.number {
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--pink-light);
+
+  color: var(--pink-dark);
+
+  font-weight: 700;
+}
+
+.gift-card h2 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 23px;
+
+  color: var(--brown-dark);
+
+  margin-bottom: 7px;
+}
+
+.gift-card p {
+  color: #806d63;
+
+  line-height: 1.5;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   TAGS
+========================= */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 14px;
+}
+
+.tags span {
+  background: var(--cream-dark);
+
+  color: var(--brown);
+
+  padding: 7px 13px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 15px;
+}
+
+.button {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  background: var(--pink);
+
+  color: white;
+
+  padding: 10px 17px;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  background: var(--pink-dark);
+
+  transform: scale(1.04);
+}
+
+.button.secondary {
+  background: var(--cream-dark);
+
+  color: var(--brown-dark);
+}
+
+.button-group .button {
+  margin-top: 0;
+}
+
+
+/* =========================
+   MESSAGE FINAL
+========================= */
+
+.message {
+  margin-top: 35px;
+
+  text-align: center;
+
+  padding: 55px 20px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--brown),
+      var(--brown-dark)
+    );
+
+  color: white;
+}
+
+.message span {
+  font-size: 38px;
+}
+
+.message h2 {
+  margin: 15px 0 10px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 32px;
+}
+
+.message p {
+  max-width: 600px;
+
+  margin: auto;
+
+  line-height: 1.7;
+
+  color: #fbeee8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 35px 10px 10px;
+
+  text-align: center;
+
+  color: #806d63;
+
+  font-size: 13px;
+}
+
+#topButton {
+  margin-top: 15px;
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--pink-dark);
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 600;
+}
+
+
+/* =========================
+   TELEPHONE
+========================= */
+
+@media (max-width: 700px) {
+
+  body {
+    padding: 15px 12px;
+  }
+
+  .hero {
+    padding: 55px 20px;
+    border-radius: 24px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .wishlist {
+    grid-template-columns: 1fr;
+  }
+
+  .gift-card {
+    padding: 20px;
+  }
+}
