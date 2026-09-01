@@ -1,8 +1,11 @@
 const topButton = document.getElementById("topButton");
 
-topButton.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+if (topButton) {
+  topButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    document.getElementById("top").scrollIntoView({
+      behavior: "smooth"
+    });
   });
-});
+}
