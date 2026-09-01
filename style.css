@@ -124,15 +124,15 @@ a {
     ),
     radial-gradient(
       circle at 35% 35%,
-      #8ed8ff 0%,
-      #2f95d1 46%,
-      #12649b 100%
+      #ead0b7 0%,
+      #c99367 46%,
+      #8d654f 100%
     );
 
   box-shadow:
     inset -42px -34px 70px rgba(0, 0, 0, 0.22),
     inset 18px 16px 45px rgba(255, 255, 255, 0.32),
-    0 35px 90px rgba(47, 149, 209, 0.28);
+    0 35px 90px rgba(141, 101, 79, 0.28);
 
   opacity: 0.48;
 
@@ -156,12 +156,12 @@ a {
   height: 100%;
 
   background:
-    radial-gradient(ellipse at 18% 34%, #4f9f61 0 7%, transparent 7.5%),
-    radial-gradient(ellipse at 29% 62%, #3f8954 0 9%, transparent 9.5%),
-    radial-gradient(ellipse at 43% 28%, #6bb56c 0 8%, transparent 8.5%),
-    radial-gradient(ellipse at 54% 56%, #3f8954 0 10%, transparent 10.5%),
-    radial-gradient(ellipse at 68% 38%, #6bb56c 0 8%, transparent 8.5%),
-    radial-gradient(ellipse at 82% 66%, #4f9f61 0 9%, transparent 9.5%);
+    radial-gradient(ellipse at 18% 34%, #f4e1cf 0 7%, transparent 7.5%),
+    radial-gradient(ellipse at 29% 62%, #b9825f 0 9%, transparent 9.5%),
+    radial-gradient(ellipse at 43% 28%, #f0caa9 0 8%, transparent 8.5%),
+    radial-gradient(ellipse at 54% 56%, #a87558 0 10%, transparent 10.5%),
+    radial-gradient(ellipse at 68% 38%, #f0caa9 0 8%, transparent 8.5%),
+    radial-gradient(ellipse at 82% 66%, #f4e1cf 0 9%, transparent 9.5%);
 
   filter: blur(0.2px);
 
