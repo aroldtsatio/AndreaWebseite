@@ -103,82 +103,116 @@ a {
 }
 
 
-.background-photo {
+.rotating-earth {
   position: absolute;
 
-  width: min(54vw, 500px);
-  height: min(90vh, 760px);
+  top: 50%;
+  left: 50%;
 
-  background-position: center;
-  background-size: cover;
+  width: min(72vw, 620px);
+  aspect-ratio: 1;
 
-  opacity: 0.58;
+  border-radius: 50%;
 
-  filter:
-    blur(0)
-    saturate(1.24)
-    contrast(1.08);
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 32% 28%,
+      rgba(255, 255, 255, 0.75),
+      transparent 16%
+    ),
+    radial-gradient(
+      circle at 35% 35%,
+      #8ed8ff 0%,
+      #2f95d1 46%,
+      #12649b 100%
+    );
 
   box-shadow:
-    0 30px 70px
-    rgba(99, 70, 56, 0.16);
+    inset -42px -34px 70px rgba(0, 0, 0, 0.22),
+    inset 18px 16px 45px rgba(255, 255, 255, 0.32),
+    0 35px 90px rgba(47, 149, 209, 0.28);
 
-  transform-origin: center;
+  opacity: 0.48;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-8deg);
+
+  animation: earthDrift 12s ease-in-out infinite;
 }
 
 
-.background-photo-one {
-  top: 5vh;
-  left: -70px;
+.rotating-earth::before {
+  content: "";
 
-  background-image: url("image/image.png");
+  position: absolute;
 
-  animation: photoFloatOne 18s ease-in-out infinite;
+  top: 0;
+  left: -100%;
+
+  width: 300%;
+  height: 100%;
+
+  background:
+    radial-gradient(ellipse at 18% 34%, #4f9f61 0 7%, transparent 7.5%),
+    radial-gradient(ellipse at 29% 62%, #3f8954 0 9%, transparent 9.5%),
+    radial-gradient(ellipse at 43% 28%, #6bb56c 0 8%, transparent 8.5%),
+    radial-gradient(ellipse at 54% 56%, #3f8954 0 10%, transparent 10.5%),
+    radial-gradient(ellipse at 68% 38%, #6bb56c 0 8%, transparent 8.5%),
+    radial-gradient(ellipse at 82% 66%, #4f9f61 0 9%, transparent 9.5%);
+
+  filter: blur(0.2px);
+
+  animation: earthSpin 18s linear infinite;
 }
 
 
-.background-photo-two {
-  right: -75px;
-  bottom: 3vh;
+.rotating-earth::after {
+  content: "";
 
-  background-image: url("image/image1.png");
+  position: absolute;
 
-  animation: photoFloatTwo 20s ease-in-out infinite;
+  inset: 0;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.22),
+      transparent 34%,
+      rgba(0, 0, 0, 0.18) 100%
+    );
 }
 
 
-@keyframes photoFloatOne {
+@keyframes earthSpin {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(33.33%);
+  }
+}
+
+
+@keyframes earthDrift {
   0%,
   100% {
     transform:
-      translate3d(0, 0, 0)
-      rotate(-4deg)
+      translate(-50%, -50%)
+      rotate(-8deg)
       scale(1);
   }
 
   50% {
     transform:
-      translate3d(24px, 18px, 0)
-      rotate(-1deg)
+      translate(-50%, -52%)
+      rotate(-8deg)
       scale(1.04);
-  }
-}
-
-
-@keyframes photoFloatTwo {
-  0%,
-  100% {
-    transform:
-      translate3d(0, 0, 0)
-      rotate(4deg)
-      scale(1.02);
-  }
-
-  50% {
-    transform:
-      translate3d(-26px, -18px, 0)
-      rotate(1deg)
-      scale(1.06);
   }
 }
 
@@ -607,26 +641,6 @@ footer {
 
   body {
     padding: 15px 12px;
-  }
-
-
-  .background-photo {
-    width: 58vw;
-    height: 46vh;
-
-    opacity: 0.46;
-  }
-
-
-  .background-photo-one {
-    top: 3vh;
-    left: -90px;
-  }
-
-
-  .background-photo-two {
-    right: -95px;
-    bottom: 14vh;
   }
 
 
