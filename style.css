@@ -95,8 +95,8 @@ a {
   background:
     linear-gradient(
       135deg,
-      rgba(255, 248, 241, 0.56),
-      rgba(248, 220, 231, 0.48)
+      rgba(255, 248, 241, 0.32),
+      rgba(248, 220, 231, 0.26)
     );
 
   z-index: 2;
@@ -106,18 +106,18 @@ a {
 .background-photo {
   position: absolute;
 
-  width: min(48vw, 430px);
-  height: min(84vh, 680px);
+  width: min(54vw, 500px);
+  height: min(90vh, 760px);
 
   background-position: center;
   background-size: cover;
 
-  opacity: 0.38;
+  opacity: 0.58;
 
   filter:
-    blur(0.3px)
-    saturate(1.16)
-    contrast(1.04);
+    blur(0)
+    saturate(1.24)
+    contrast(1.08);
 
   box-shadow:
     0 30px 70px
@@ -192,11 +192,11 @@ a {
 
   text-align: center;
 
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.28);
 
   backdrop-filter: blur(10px);
 
-  border: 1px solid rgba(141, 101, 79, 0.15);
+  border: 1px solid rgba(141, 101, 79, 0.08);
 
   border-radius: 26px;
 
@@ -204,7 +204,7 @@ a {
 
   box-shadow:
     0 20px 50px
-    rgba(99, 70, 56, 0.09);
+    rgba(99, 70, 56, 0.04);
 
   overflow: hidden;
 
@@ -370,7 +370,7 @@ a {
 
 .gift-card {
   background:
-    rgba(255, 255, 255, 0.88);
+    rgba(255, 255, 255, 0.7);
 
   border-radius: 0;
 
@@ -614,7 +614,7 @@ footer {
     width: 58vw;
     height: 46vh;
 
-    opacity: 0.28;
+    opacity: 0.46;
   }
 
 
