@@ -14,7 +14,8 @@
   --cream-dark: #f3e4d8;
 
   --white: #ffffff;
-  --text: #4f4039;
+
+  --text: #000000;
 }
 
 
@@ -33,11 +34,22 @@ html {
 }
 
 body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family:
+    "Nunito Sans",
+    Arial,
+    sans-serif;
 
   background:
-    radial-gradient(circle at top left, #f9dce8 0%, transparent 30%),
-    linear-gradient(135deg, #fff8f1, #f8eee6);
+    radial-gradient(
+      circle at top left,
+      #f9dce8 0%,
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #fff8f1,
+      #f8eee6
+    );
 
   color: var(--text);
 
@@ -62,28 +74,37 @@ a {
 
 .hero {
   position: relative;
+
   text-align: center;
 
   background: rgba(255, 255, 255, 0.75);
+
   backdrop-filter: blur(10px);
 
   border: 1px solid rgba(141, 101, 79, 0.15);
-  border-radius: 30px;
+
+  border-radius: 26px;
 
   padding: 70px 20px;
 
-  box-shadow: 0 20px 50px rgba(99, 70, 56, 0.09);
+  box-shadow:
+    0 20px 50px
+    rgba(99, 70, 56, 0.09);
+
   overflow: hidden;
 }
 
+
 .hero::before {
   content: "";
+
   position: absolute;
 
   width: 230px;
   height: 230px;
 
   background: var(--pink-light);
+
   border-radius: 50%;
 
   top: -100px;
@@ -92,65 +113,79 @@ a {
   opacity: 0.65;
 }
 
+
 .hero::after {
   content: "";
+
   position: absolute;
 
   width: 180px;
   height: 180px;
 
   background: var(--cream-dark);
+
   border-radius: 50%;
 
   bottom: -100px;
   left: -40px;
 }
 
-.heart {
-  font-size: 48px;
-  margin-bottom: 15px;
-  position: relative;
-  z-index: 2;
-}
 
 .small-title {
-  letter-spacing: 5px;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--pink-dark);
-
-  margin-bottom: 12px;it add
-
   position: relative;
   z-index: 2;
+
+  margin-bottom: 12px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: #000000;
 }
 
+
 .hero h1 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(45px, 8vw, 75px);
+  position: relative;
+  z-index: 2;
+
+  font-family:
+    "Fraunces",
+    serif;
+
+  font-size:
+    clamp(45px, 8vw, 75px);
+
+  font-weight: 600;
 
   color: var(--brown-dark);
 
   line-height: 1;
-
-  position: relative;
-  z-index: 2;
 }
+
 
 .hero h1 span {
   color: var(--pink);
+
   font-style: italic;
 }
 
+
 .subtitle {
-  max-width: 580px;
-  margin: 22px auto 0;
-
-  line-height: 1.7;
-  color: #79655b;
-
   position: relative;
   z-index: 2;
+
+  max-width: 580px;
+
+  margin: 22px auto 0;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: #000000;
 }
 
 
@@ -169,64 +204,55 @@ a {
   margin-top: 35px;
 }
 
+
 .gift-card {
-  display: flex;
-  gap: 18px;
+  background:
+    rgba(255, 255, 255, 0.88);
 
-  background: rgba(255, 255, 255, 0.88);
+  border-radius: 0;
 
-  border-radius: 22px;
+  padding: 27px;
 
-  padding: 25px;
+  border:
+    1px solid
+    rgba(141, 101, 79, 0.13);
 
-  border: 1px solid rgba(141, 101, 79, 0.13);
-
-  box-shadow: 0 12px 30px rgba(99, 70, 56, 0.07);
+  box-shadow:
+    0 10px 25px
+    rgba(99, 70, 56, 0.06);
 
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
+
 .gift-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 
   box-shadow:
-    0 18px 40px
-    rgba(99, 70, 56, 0.12);
+    0 16px 35px
+    rgba(99, 70, 56, 0.1);
 }
 
-.number {
-  width: 44px;
-  height: 44px;
-
-  min-width: 44px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: var(--pink-light);
-
-  color: var(--pink-dark);
-
-  font-weight: 700;
-}
 
 .gift-card h2 {
-  font-family: "Playfair Display", serif;
+  font-family:
+    "Fraunces",
+    serif;
 
   font-size: 23px;
 
-  color: var(--brown-dark);
+  font-weight: 500;
 
-  margin-bottom: 7px;
+  color: #000000;
+
+  margin-bottom: 8px;
 }
 
+
 .gift-card p {
-  color: #806d63;
+  color: #000000;
 
   line-height: 1.5;
 
@@ -240,6 +266,7 @@ a {
 
 .tags {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 8px;
@@ -247,16 +274,18 @@ a {
   margin-top: 14px;
 }
 
+
 .tags span {
   background: var(--cream-dark);
 
-  color: var(--brown);
+  color: #000000;
 
   padding: 7px 13px;
 
-  border-radius: 30px;
+  border-radius: 20px;
 
   font-size: 12px;
+
   font-weight: 600;
 }
 
@@ -267,12 +296,14 @@ a {
 
 .button-group {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 8px;
 
   margin-top: 15px;
 }
+
 
 .button {
   display: inline-block;
@@ -281,13 +312,14 @@ a {
 
   background: var(--pink);
 
-  color: white;
+  color: #000000;
 
-  padding: 10px 17px;
+  padding: 9px 16px;
 
-  border-radius: 30px;
+  border-radius: 8px;
 
   font-size: 13px;
+
   font-weight: 600;
 
   transition:
@@ -295,17 +327,20 @@ a {
     transform 0.2s ease;
 }
 
+
 .button:hover {
   background: var(--pink-dark);
 
-  transform: scale(1.04);
+  transform: translateY(-2px);
 }
+
 
 .button.secondary {
   background: var(--cream-dark);
 
-  color: var(--brown-dark);
+  color: #000000;
 }
+
 
 .button-group .button {
   margin-top: 0;
@@ -323,7 +358,7 @@ a {
 
   padding: 55px 20px;
 
-  border-radius: 30px;
+  border-radius: 20px;
 
   background:
     linear-gradient(
@@ -332,20 +367,22 @@ a {
       var(--brown-dark)
     );
 
-  color: white;
+  color: #000000;
 }
 
-.message span {
-  font-size: 38px;
-}
 
 .message h2 {
-  margin: 15px 0 10px;
+  margin-bottom: 12px;
 
-  font-family: "Playfair Display", serif;
+  font-family:
+    "Fraunces",
+    serif;
 
-  font-size: 32px;
+  font-size: 34px;
+
+  font-weight: 600;
 }
+
 
 .message p {
   max-width: 600px;
@@ -354,7 +391,9 @@ a {
 
   line-height: 1.7;
 
-  color: #fbeee8;
+  color: #000000;
+
+  font-size: 14px;
 }
 
 
@@ -367,10 +406,11 @@ footer {
 
   text-align: center;
 
-  color: #806d63;
+  color: #000000;
 
   font-size: 13px;
 }
+
 
 #topButton {
   margin-top: 15px;
@@ -379,12 +419,18 @@ footer {
 
   background: transparent;
 
-  color: var(--pink-dark);
+  color: #000000;
 
   cursor: pointer;
 
   font-family: inherit;
+
   font-weight: 600;
+}
+
+
+#topButton:hover {
+  text-decoration: underline;
 }
 
 
@@ -398,20 +444,37 @@ footer {
     padding: 15px 12px;
   }
 
+
   .hero {
     padding: 55px 20px;
-    border-radius: 24px;
+
+    border-radius: 20px;
   }
+
 
   .hero h1 {
     font-size: 48px;
   }
 
+
   .wishlist {
     grid-template-columns: 1fr;
   }
 
+
   .gift-card {
-    padding: 20px;
+    padding: 22px;
+  }
+
+
+  .gift-card h2 {
+    font-size: 21px;
+  }
+
+
+  .message {
+    padding: 45px 20px;
+
+    border-radius: 18px;
   }
 }
