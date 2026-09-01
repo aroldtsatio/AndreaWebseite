@@ -207,6 +207,8 @@ a {
     rgba(99, 70, 56, 0.09);
 
   overflow: hidden;
+
+  animation: heroEntrance 0.9s ease both;
 }
 
 
@@ -259,6 +261,8 @@ a {
   letter-spacing: 4px;
 
   color: #000000;
+
+  animation: textEntrance 0.8s ease 0.15s both;
 }
 
 
@@ -278,6 +282,8 @@ a {
   color: var(--brown-dark);
 
   line-height: 1;
+
+  animation: titleEntrance 0.9s ease 0.25s both;
 }
 
 
@@ -301,6 +307,47 @@ a {
   line-height: 1.7;
 
   color: #000000;
+
+  animation: textEntrance 0.8s ease 0.4s both;
+}
+
+
+@keyframes heroEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+@keyframes titleEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes textEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
