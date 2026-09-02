@@ -137,10 +137,11 @@ a {
   opacity: 0.72;
 
   transform:
-    translate(-50%, -95vh)
+    translate(-50%, -50%)
+    translate(-32vw, -28vh)
     rotate(-8deg);
 
-  animation: earthDrift 16s linear infinite;
+  animation: earthBounce 24s linear infinite;
 }
 
 
@@ -199,24 +200,51 @@ a {
 }
 
 
-@keyframes earthDrift {
+@keyframes earthBounce {
   0% {
     transform:
-      translate(-50%, -95vh)
+      translate(-50%, -50%)
+      translate(-32vw, -28vh)
       rotate(-8deg)
       scale(0.96);
   }
 
-  50% {
+  18% {
     transform:
       translate(-50%, -50%)
+      translate(30vw, -18vh)
       rotate(-8deg)
       scale(1.02);
   }
 
+  38% {
+    transform:
+      translate(-50%, -50%)
+      translate(18vw, 30vh)
+      rotate(-8deg)
+      scale(0.98);
+  }
+
+  58% {
+    transform:
+      translate(-50%, -50%)
+      translate(-34vw, 24vh)
+      rotate(-8deg)
+      scale(1.03);
+  }
+
+  78% {
+    transform:
+      translate(-50%, -50%)
+      translate(28vw, 4vh)
+      rotate(-8deg)
+      scale(0.99);
+  }
+
   100% {
     transform:
-      translate(-50%, 45vh)
+      translate(-50%, -50%)
+      translate(-32vw, -28vh)
       rotate(-8deg)
       scale(0.96);
   }
